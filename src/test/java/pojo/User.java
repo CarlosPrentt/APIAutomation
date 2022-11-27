@@ -8,8 +8,22 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class user {
+public class User {
     private int id;
+
+    public User(int id, String name, String lastName, int accountNumber, int amount, String transactionType, String email, boolean active, String country, String telephone) {
+        this.setId(id);;
+        this.setName(name);
+        this.setLastName(lastName);
+        this.setAccountNumber(accountNumber);
+        this.setAmount(amount);
+        this.setTransactionType(transactionType);
+        this.setEmail(email);
+        this.setActive(active);
+        this.setCountry(country);
+        this.setTelephone(telephone);
+    }
+
     private String name;
     private String lastName;
     private int accountNumber;
@@ -18,7 +32,7 @@ public class user {
     private String email;
     private boolean active;
     private String country;
-    private int telephone;
+    private String telephone;
 
     public int getId() {
         return id;
@@ -92,31 +106,11 @@ public class user {
         this.country = country;
     }
 
-    public int getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(int telephone) {
+    public void setTelephone(String telephone) {
         this.telephone = telephone;
-    }
-
-    @Test
-    public void jsonPathUsage() {
-        RestAssured.baseURI = "https://637e812f5b1cc8d6f92f6bbb.mockapi.io/api/v1/";
-        RequestSpecification httpRequest = RestAssured.given();
-        Response response = httpRequest.get("user/");
-
-        // First get the JsonPath object instance from the Response interface
-        JsonPath jsonPathEvaluator = response.jsonPath();
-
-        // Read all the books as a List of String. Each item in the list
-        // represent a book node in the REST service Response
-        List<String> usersList = jsonPathEvaluator.getList("Name");
-
-        // Iterate over the list and print individual book item
-        for(String user : usersList)
-        {
-            System.out.println("User: " + user);
-        }
     }
 }

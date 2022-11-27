@@ -1,20 +1,17 @@
 package tests;
 
-import static io.restassured.RestAssured.*;
-
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.apache.log4j.Logger;
 import org.junit.Test;
+import persistence.InicializeData;
+import pojo.User;
 
 import java.util.List;
 
-public class EmptyData {
-
-    Logger log = Logger.getLogger(EmptyData.class);
-
+public class PostUsersTest {
+    User user = InicializeData.loadUsers();
     @Test
     public void jsonPathUsage() {
         RestAssured.baseURI = "https://637e812f5b1cc8d6f92f6bbb.mockapi.io/api/v1/";
@@ -29,19 +26,14 @@ public class EmptyData {
         List<String> usersList = jsonPathEvaluator.getList("Name");
 
         // Iterate over the list and print individual book item
-        for(String user : usersList)
-        {
+        for (String user : usersList) {
             System.out.println("User: " + user);
-            log.info("Hola");
         }
-
-        if(usersList.size() > 0) {
-            for (int i = 0; i < usersList.size(); i++) {
-                int userId = i + 1;
-                response = httpRequest.delete("user/" + userId);
-            }
-            response.then().extract().response();
-            response.then().statusCode(200);
+        for (int i = 0; i < usersList.size(); i++) {
+            int userId = i + 1;
+            response = httpRequest.post(user.getName());
         }
+        response.then().extract().response();
+        response.then().statusCode(200);
     }
 }
