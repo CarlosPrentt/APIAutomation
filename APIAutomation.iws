@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a6ee66-e2de-41fe-a2f7-ca1e9dec8b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DupplicateEmailsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/PostUsersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIAutomation.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/APIAutomation.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIAutomation.iws" beforeDir="false" afterPath="$PROJECT_DIR$/APIAutomation.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/persistence/InicializeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/persistence/InicializeData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/user.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/EmptyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/EmptyDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/suite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pojo/user.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pojo/user.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/suite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/EmptyData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
